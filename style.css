@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  color: white;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+}
+
+.magic-8ball {
+  width: 300px;
+  height: 300px;
+  background: #000;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto 2rem;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.answer-window {
+  width: 150px;
+  height: 150px;
+  background: #0f172a;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #1e293b;
+}
+
+.answer-text {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  max-width: 120px;
+  word-wrap: break-word;
+  display: none; /* Hide by default */
+}
+
+.answer-text.visible {
+  display: block; /* Show when visible class is added */
+}
+
+input {
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 1rem;
+  padding: 1rem 1.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: rgba(96, 165, 250, 0.5);
+}
+
+button {
+  width: 100%;
+  max-width: 300px;
+  padding: 1rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: rotate(0); }
+  20% { transform: rotate(-20deg); }
+  40% { transform: rotate(20deg); }
+  60% { transform: rotate(-10deg); }
+  80% { transform: rotate(10deg); }
+}
+
+.share-container {
+  margin-top: 1rem;
+}
+
+.share-button, .share-option {
+  margin-top: 0.5rem;
+  background: #4f46e5;
+}
+
+.share-options {
+  display: none;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.share-options.show {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
