@@ -1,56 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Get answers to your questions from the mystical Magic 8 Ball">
-  <meta property="og:title" content="Magic 8 Ball - Get Your Answer">
-  <meta property="og:description" content="Seek wisdom from the mystical Magic 8 Ball - Your digital fortune teller">
-  <meta property="og:type" content="website">
-  <title>Magic 8 Ball - Get Your Answer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <audio id="shakeSound" preload="auto">
-    <source src="https://assets.mixkit.co/active_storage/sfx/2006/2006-preview.mp3" type="audio/mpeg">
-  </audio>
-  <div class="container">
-    <div class="capture-area">
-      <h1 class="title">Magic 8 Ball</h1>
-      <p class="tagline">Seek wisdom from the mystical sphere</p>
-      <div class="prediction-display"></div>
-      <div class="magic-8ball">
-        <div class="answer-window">
-          <div class="answer-text"></div>
-        </div>
-      </div>
-    </div>
-    <input type="text" id="question" placeholder="Ask a question...">
-    <button id="shake">Shake</button>
-    <div class="share-container">
-      <button id="share" class="share-button" style="display: none;">
-        <i class="fas fa-share-alt"></i> Share Prediction
-      </button>
-      <div class="share-options">
-        <button class="share-option" data-platform="twitter">
-          <i class="fab fa-twitter"></i> Twitter
-        </button>
-        <button class="share-option" data-platform="facebook">
-          <i class="fab fa-facebook"></i> Facebook
-        </button>
-        <button class="share-option" data-platform="image">
-          <i class="fas fa-image"></i> Share Image
-        </button>
-        <button class="share-option" data-platform="download">
-          <i class="fas fa-download"></i> Save Text
-        </button>
-      </div>
-    </div>
-  </div>
-  <script type="module" src="main.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magic 8 Ball</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
