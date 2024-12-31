@@ -3,15 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Magic 8 Ball</title>
-  <link rel="stylesheet" href="/style.css">
+  <meta property="og:title" content="Magic 8 Ball - Get Your Answer">
+  <meta property="og:description" content="Seek wisdom from the mystical Magic 8 Ball - Your digital fortune teller">
+  <meta property="og:url" content="https://magic-8ball.subproject9.com">
+  <title>Magic 8 Ball - Get Your Answer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+  <audio id="shakeSound" preload="auto">
+    <source src="https://assets.mixkit.co/active_storage/sfx/2006/2006-preview.mp3" type="audio/mpeg">
+  </audio>
   <div class="container">
-    <div class="magic-8ball">
-      <div class="answer-window">
-        <div class="answer-text"></div>
+    <div class="capture-area">
+      <h1 class="title">Magic 8 Ball</h1>
+      <p class="tagline">Seek wisdom from the mystical sphere</p>
+      <div class="prediction-display"></div>
+      <div class="magic-8ball">
+        <div class="answer-window">
+          <div class="answer-text"></div>
+        </div>
       </div>
     </div>
     <input type="text" id="question" placeholder="Ask a question...">
@@ -27,8 +39,11 @@
         <button class="share-option" data-platform="facebook">
           <i class="fab fa-facebook"></i> Facebook
         </button>
+        <button class="share-option" data-platform="image">
+          <i class="fas fa-image"></i> Share Image
+        </button>
         <button class="share-option" data-platform="download">
-          <i class="fas fa-download"></i> Save Prediction
+          <i class="fas fa-download"></i> Save Text
         </button>
       </div>
     </div>
